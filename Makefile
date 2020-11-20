@@ -6,7 +6,7 @@ deps:
 	pip install -r requirements.txt
 
 netsim:
-	ncs-netsim create-network cisco-ios 3 router
+	ncs-netsim create-network cisco-ios-cli-3.8 3 router
 	ncs-netsim start
 
 nso:

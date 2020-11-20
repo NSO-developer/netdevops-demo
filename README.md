@@ -5,9 +5,19 @@
 This is a slightly different take on the wonderful [nso-ansible-demo](https://github.com/NSO-developer/nso-ansible-demo)
 demo.  
 
+## Environment
+
+This new version of the repository is tested against the following component:
+* NSO 5.3.2.1 - but should be compatible with any NSO 5.x version
+* Ansible 2.10 - leveraging the Ansible NSO collection available
+    [here](https://github.com/CiscoDevNet/ansible-nso)
+* Python > 3.6 (Python 2 being out of support)
+* The REST API being deprecated, the `helpers/nso.py` file has been updated to
+    user RESTCONF ([RFC 8040](https://tools.ietf.org/html/rfc8040)) 
+
 ## Demo video
 
-You can see a sample of the demo workflow [here](https://asciinema.org/a/lYRbSZOTKQif2jycTwhygreD1?speed=2)
+You can see a sample of the demo workflow with the python 2 version [here](https://asciinema.org/a/lYRbSZOTKQif2jycTwhygreD1?speed=2)
 
 ## NetDevOps
 NetDevOps and Infrastructure as Code continue to be hot topics in the networking industry, and the goal
@@ -42,9 +52,10 @@ pip install -r requirements.txt
 Use the ncs-netsim tool to prepare to simulate a network consisting of three instances of simulated cisco IOS-XE devices
 
 ```
-ncs-netsim create-network cisco-ios 3 router
+ncs-netsim create-network cisco-ios-cli-3.8 3 router
 ncs-netsim start
 ```
+
 
 This creates all the required files for starting the simulated instances and starts the devices.
 
