@@ -1,6 +1,6 @@
 ansible==2.10.3
 ansible-base==2.10.3
-certifi==2020.11.8
+certifi==2022.12.7
 cffi==1.14.3
 chardet==3.0.4
 cryptography==3.2.1
